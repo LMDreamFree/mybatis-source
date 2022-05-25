@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <groupId>com.dream</groupId>
+    <artifactId>parent</artifactId>
+    <version>2022.1.1</version>
+    <name>${project.artifactId}</name>
+    <packaging>pom</packaging>
+    <description>mybatis-source</description>
+    <modelVersion>4.0.0</modelVersion>
+
+
+    <modules>
+        <module>mybatis-singleton</module>
+    </modules>
+
+
+    <properties>
+        <mybatis.version>3.5.10</mybatis.version>
+        <hikari.version>5.0.1</hikari.version>
+        <mysql.versionversion>8.0.29</mysql.versionversion>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/com.zaxxer/HikariCP -->
+            <dependency>
+                <groupId>com.zaxxer</groupId>
+                <artifactId>HikariCP</artifactId>
+                <version>${hikari.version}</version>
+            </dependency>
+
+
+            <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.versionversion}</version>
+
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>

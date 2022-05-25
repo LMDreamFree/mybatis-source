@@ -1,0 +1,22 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dream.singleton.mybatis.mapper.UserMapper">
+
+
+    <resultMap id="BaseResultMap" type="com.dream.singleton.mybatis.domain.User">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="age" property="age"/>
+        <result column="gender" property="gender"/>
+        <result column="weight" property="weight"/>
+    </resultMap>
+
+    <select id="getUserById" resultMap="BaseResultMap">
+        select *
+        from user
+        where id = #{id}
+    </select>
+
+</mapper>
