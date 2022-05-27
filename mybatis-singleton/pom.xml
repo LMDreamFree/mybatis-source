@@ -8,6 +8,7 @@
         <groupId>com.dream</groupId>
         <artifactId>parent</artifactId>
         <version>2022.1.1</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <groupId>org.dream</groupId>
     <artifactId>mybatis-singleton</artifactId>
