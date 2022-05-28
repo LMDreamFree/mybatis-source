@@ -22,8 +22,10 @@ public class UserMapperSelectDemo {
 
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 
+        //org.apache.ibatis.session.defaults.DefaultSqlSession
         SqlSession sqlSession = sqlSessionFactory.openSession();
 
+        //org.apache.ibatis.binding.MapperProxy
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
 
         System.out.println(userMapper.getUserById(1));

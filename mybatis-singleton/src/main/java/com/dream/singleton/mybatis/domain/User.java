@@ -1,6 +1,7 @@
 package com.dream.singleton.mybatis.domain;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * @author <a href = "mailto:lmdreamfree@163.com">lim</a>
@@ -26,6 +27,8 @@ public class User implements Serializable {
      * 体重 单位:克
      */
     private int weight;
+
+    private List<String> hobbies;
 
 
     public long getId() {
@@ -69,6 +72,15 @@ public class User implements Serializable {
     }
 
 
+    public List<String> getHobbies() {
+        return hobbies;
+    }
+
+
+    public void setHobbies(List<String> hobbies) {
+        this.hobbies = hobbies;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -77,6 +89,7 @@ public class User implements Serializable {
                 ", age=" + age +
                 ", gender=" + gender +
                 ", weight=" + weight +
+                ", hobbies=" + hobbies +
                 '}';
     }
 }

@@ -8,9 +8,22 @@
     <properties resource="META-INF/datasource.properties"/>
     <!--有顺序要求 <properties/>-->
 
+    <settings>
+        <!--关闭二级缓存 二级缓存默认开启-->
+        <setting name="cacheEnabled" value="false"/>
+    </settings>
+
+    <typeHandlers>
+        <typeHandler handler="com.dream.singleton.mybatis.type.handler.ListTypeHandle"/>
+    </typeHandlers>
+    
+
     <environments default="development">
         <environment id="development">
-            <transactionManager type="JDBC"/>
+            <!-- 单独使用时配置成MANAGED没有事务 -->
+            <transactionManager type="JDBC">
+               <!-- <property name="..." value="..."/>-->
+            </transactionManager>
             <dataSource type="POOLED">
                 <property name="driver" value="${driver}"/>
                 <property name="url" value="${url}"/>
