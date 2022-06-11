@@ -5,7 +5,7 @@
 <mapper namespace="com.dream.singleton.mybatis.mapper.UserMapper">
 
     <!--开启mybatis二级缓存-->
-    <cache/>
+    <!--<cache/>-->
 
     <resultMap id="BaseResultMap" type="com.dream.singleton.mybatis.domain.User">
         <id column="id" property="id"/>
