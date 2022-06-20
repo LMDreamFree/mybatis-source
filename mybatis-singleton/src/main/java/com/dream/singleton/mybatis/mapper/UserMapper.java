@@ -12,4 +12,6 @@ import java.io.Serializable;
 public interface UserMapper {
 
     User getUserById(Serializable id);
+
+    Integer updateById(String name);
 }

@@ -22,4 +22,9 @@
         where id = #{id}
     </select>
 
+
+    <update id="updateById">
+        update user set name = #{param1} where id = 1
+    </update>
+
 </mapper>
